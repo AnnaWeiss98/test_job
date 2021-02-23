@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Билеты на событие</title>
+		<link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <label for="num">Количество билетов</label>
+        <input id="num"><br />
+        <button onclick="button()">Посчитать</button>
+        <script>
+            function button() {
+                alert("+1");
+            }
+        </script>
+        <br />
+        <table border=solid>
+			<tr align="center">
+				<th>id</th>
+				<th>event_id</th>
+				<th>created</th>
+            </tr>
+            <tr align="center">
+				<td>1</td>
+				<td>003</td>
+				<td>
+                    <script>
+                        var d = new Date();
+                        document.write(d);
+                    </script> 
+                </td>
+            </tr>
+            <tr align="center">
+				<td>2</td>
+				<td>006</td>
+				<td>
+                    <script>
+                    var d = new Date();
+                    document.write(d);
+                    </script>
+                </td>
+            </tr>
+            <tr align="center">
+				<td>3</td>
+				<td>003</td>
+				<td>
+                    <script>
+                        var d = new Date();
+                        document.write(d);
+                    </script>
+                </td>
+            </tr>
+            <br />
+            <table border="solid">
+                <tr align="center">
+                    <th>id_order</th>
+                    <th>barcode</th>
+                    <th>type</th>
+                </tr>
+                <tr align="center">
+                    <td>1</td>
+                    <td>111111</td>
+                    <td>adult</td>
+                </tr>
+                <tr align="center">
+                    <td>2</td>
+                    <td>222222</td>
+                    <td>kid</td>
+                </tr>
+                <tr align="center">
+                    <td>3</td>
+                    <td>333333</td>
+                    <td>special</td>
+                </tr>
+                <br />
+                <table border=solid>
+                    <tr align="center">
+                        <th>ticket_type</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                    </tr>
+                    <tr align="center">
+                        <td>adult</td>
+                        <td>700</td>
+                        <td>
+                            <form>
+                                <input type = "text" id="add"  size="5"  value="0">
+                                <input type="button" id="addButton"  value="Добавить">
+                                <script>
+                                    window.onload = init;
+                                    
+                                    function init(){
+                                        var button = document.getElementById("addButton")
+                                        button.onclick = handleButtonClick;
+                                    }
+                                    
+                                    function handleButtonClick() {
+                                        alert("Билет добавлен");
+                                        /*var addTicket = textInput.value;
+                                        var ul  =  document.getElementById("ul");
+                                        var li = document.createElement("li");
+                                        li.innerHTML = addTicket;
+                                        ul.appendChild(li);*/
+                                    }
+                                    function addy(){
+                                        var i = 0;
+                                        do {
+                                            i++;
+                                            document.write(i);
+                                        } while (handleButtonClick());
+                                    }
+                                    </script>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>kid</td>
+                        <td>450</td>
+                        <td>
+                            <form>
+                                <input type = "text" id="add"  size="5"  value="0">
+                                <input type="button" id="addButton"  value="Добавить">
+                                <script>
+                                    window.onload = init;
+                                    function init(){
+                                        var button = document.getElementById("addButton")
+                                        button.onclick = handleButtonClick;
+                                    }
+                                    function handleButtonClick() {
+                                        alert("Билет добавлен");
+                                        var addTicket = textInput.value;
+                                        var ul  =  document.getElementById("ul");
+                                        var li = document.createElement("li");
+                                        li.innerHTML = addTicket;
+                                        ul.appendChild(li);
+                                    }
+                                </script>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>special</td>
+                        <td>600</td>
+                        <td>
+                            <form>
+                                <input type = "text" id="add"  size="5"  value="0">
+                                <input type="button" id="addButton"  value="Добавить">
+                                <script>
+                                    window.onload = init;
+                                    function init(){
+                                        var button = document.getElementById("addButton")
+                                        button.onclick = handleButtonClick;
+                                    }
+                                    function handleButtonClick() {
+                                        alert("Билет добавлен");
+                                        var addTicket = textInput.value;
+                                        var ul  =  document.getElementById("ul");
+                                        var li = document.createElement("li");
+                                        li.innerHTML = addTicket;
+                                        ul.appendChild(li);
+                                    }
+                                </script>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>coll</td>
+                        <td>500</td>
+                        <td>
+                            <form>
+                                <input type = "text" id="add"  size="5"  value="0">
+                                <input type="button" id="addButton"  value="Добавить">
+                                <script>
+                                    window.onload = init;
+                                    function init(){
+                                        var button = document.getElementById("addButton")
+                                        button.onclick = handleButtonClick;
+                                    }
+                                    function handleButtonClick() {
+                                        alert("Билет добавлен");
+                                        var addTicket = textInput.value;
+                                        var ul  =  document.getElementById("ul");
+                                        var li = document.createElement("li");
+                                        li.innerHTML = addTicket;
+                                        ul.appendChild(li);
+                                    }
+                                </script>
+                            </form>
+                        </td>
+                    </tr>
+                <br />
+                <table border="solid">
+                    <tr align="center">
+                        <th>id</th>
+                        <th>event</th>
+                    </tr>
+                    <tr align="center">
+                        <td>1</td>
+                        <td>2021-08-21 13:00:00</td>
+                    </tr>
+                    <tr align="center">
+                        <td>2</td>
+                        <td>2021-07-29 18:00:00</td>
+                    </tr>
+                    <tr align="center">
+                        <td>3</td>
+                        <td>2021-08-15 17:00:00</td>
+                    </tr>
+                <br />
+          
+    </body>
+      
