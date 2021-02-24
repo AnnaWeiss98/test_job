@@ -1,0 +1,87 @@
+<html>
+    <head>
+    <meta charset='utf-8'>
+    
+    </head>
+<body>
+    <!--<script src="js/script.js"></script>-->
+    <label for="route">Выберите направление</label>
+    <select name="route" id="route">
+        <option value="из A в B">из A в B</option>
+        <option value="из B в A">из B в A</option>
+        <option value="из A в B и обратно в А">из A в B и обратно в А</option>
+    </select>
+    <label for="time">Выберите время</label>
+    <select name="time" id="time">
+        <option value="18:00(из A в B)">18:00(из A в B)</option>
+        <option value="18:30(из A в B)">18:30(из A в B)</option>
+        <option value="18:45(из A в B)">18:45(из A в B)</option>
+        <option value="19:00(из A в B)">19:00(из A в B)</option>
+        <option value="19:15(из A в B)">19:15(из A в B)</option>
+        <option value="21:00(из A в B)">21:00(из A в B)</option>
+        <option value="18:30(из B в A)">18:30(из B в A)</option>
+        <option value="18:45(из B в A)">18:45(из B в A)</option>
+        <option value="19:00(из B в A)">19:00(из B в A)</option>
+        <option value="19:15(из B в A)">19:15(из B в A)</option>
+        <option value="19:35(из B в A)">19:35(из B в A)</option>
+        <option value="21:50(из B в A)">21:50(из B в A)</option>
+        <option value="21:55(из B в A)">21:55(из B в A)</option>
+    </select>
+    
+    <br />
+</body>
+<label>
+        
+</label>
+<form>
+    
+    <label for="num">Количество билетов</label>
+    <input type="text" id="num" value="">
+    <input type="button" id="addButton" value="Посчитать">
+    <script>
+        var button = document.getElementById("addButton");
+            button.onclick = handleButtonClick;
+        
+        function handleButtonClick() {
+            var textInput = document.getElementById("num");
+            var count = textInput.value;
+            if (count == ""){
+                alert ("Вы не выбрали ни одного билета");
+            } else {
+                var ul  =  document.getElementById("list");
+                var li = document.createElement("li");
+                li.innerHTML = count;
+                ul.appendChild(li);
+                alert("Оформить заказ" + " " + count + " " +"билетов?");
+        }}
+        
+    </script>
+    <h3>Вы выбрали билетов:</h3>
+<ul id = "list">
+    
+</ul>
+
+</form>
+<br />
+<body>
+    <script>
+        let time = 50;
+        document.write("Это путешествие займет у вас" + " " + time + " " + " минут.");
+    </script>
+    <br />
+    <script>
+        let quontity = document.getElementById('num');
+        let count;
+        let route;
+        /*document.write("Вы выбрали " + " " +  + " " + "билета по маршруту"+ " " + route + " "+ "стоимостью"+ " " + count);*/
+    </script>
+    <br />
+    <script>
+        
+        let start = document.getElementById('time');
+        let stop = document.getElementById('time' + 50 ); 
+        document.write ("Теплоход отправляется в" + " " + start + " " + ", а прибудет в" + " " + stop);
+    </script>
+    
+</body>
+</html>
