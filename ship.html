@@ -6,26 +6,26 @@
 <body>
     <!--<script src="js/script.js"></script>-->
     <label for="route">Выберите направление</label>
-    <select name="route" id="route">
-        <option value="из A в B">из A в B</option>
-        <option value="из B в A">из B в A</option>
-        <option value="из A в B и обратно в А">из A в B и обратно в А</option>
-    </select>
+        <select name="route" id="route">
+            <option value="01_route">из A в B</option>
+            <option value="02_route">из B в A</option>
+            <option value="01_02_route">из A в B и обратно в А</option>
+        </select>
     <label for="time">Выберите время</label>
     <select name="time" id="time">
-        <option value="18:00(из A в B)">18:00(из A в B)</option>
-        <option value="18:30(из A в B)">18:30(из A в B)</option>
-        <option value="18:45(из A в B)">18:45(из A в B)</option>
-        <option value="19:00(из A в B)">19:00(из A в B)</option>
-        <option value="19:15(из A в B)">19:15(из A в B)</option>
-        <option value="21:00(из A в B)">21:00(из A в B)</option>
-        <option value="18:30(из B в A)">18:30(из B в A)</option>
-        <option value="18:45(из B в A)">18:45(из B в A)</option>
-        <option value="19:00(из B в A)">19:00(из B в A)</option>
-        <option value="19:15(из B в A)">19:15(из B в A)</option>
-        <option value="19:35(из B в A)">19:35(из B в A)</option>
-        <option value="21:50(из B в A)">21:50(из B в A)</option>
-        <option value="21:55(из B в A)">21:55(из B в A)</option>
+        <option value="18.00">18:00(из A в B)</option>
+        <option value="18.30">18:30(из A в B)</option>
+        <option value="18.45">18:45(из A в B)</option>
+        <option value="19.00">19:00(из A в B)</option>
+        <option value="19.15">19:15(из A в B)</option>
+        <option value="21.00">21:00(из A в B)</option>
+        <option value="18.30">18:30(из B в A)</option>
+        <option value="18.45">18:45(из B в A)</option>
+        <option value="19.00">19:00(из B в A)</option>
+        <option value="19.15">19:15(из B в A)</option>
+        <option value="19.35">19:35(из B в A)</option>
+        <option value="21.50">21:50(из B в A)</option>
+        <option value="21.55">21:55(из B в A)</option>
     </select>
     
     <br />
@@ -78,8 +78,9 @@
     <br />
     <script>
         
-        let start = document.getElementById('time');
-        let stop = document.getElementById('time' + 50 ); 
+        let start = document.getElementById('time').value;
+        let stop = ((parseFloat(start)) + 0.5 ).toFixed(2);
+
         document.write ("Теплоход отправляется в" + " " + start + " " + ", а прибудет в" + " " + stop);
     </script>
     
