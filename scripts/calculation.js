@@ -82,7 +82,7 @@ function showResults() {
     var ticketsAmount = $("#num").val();
     var routeName = route_info[$("#route_selector").val()].name;
     var routePrice = route_info[$("#route_selector").val()].price * ticketsAmount;
-    var travelTime = ($("#route_selector").val() == "01_02_route" ? 2 : 1) * travel_time;
+    var travelTime = ($("#route_selector").val() == "01_02_route") * travel_time;
 
     var resultText = `<p>Вы выбрали ${ticketsAmount} билета по маршруту ${routeName} стоимостью ${routePrice}р.
                       <p>Это путешествие займет у вас ${travelTime} минут.  `
